@@ -1,0 +1,651 @@
+body{
+  background-color: #f0f0f0; /* Color de fondo */
+  background-image: linear-gradient(to bottom right, #bcdef5, rgb(96, 194, 240)); /* Gradiente de color */
+  background-attachment: fixed; /* Fondo fijo al hacer scroll */
+  background-size: cover; /* Ajuste para cubrir el área visible */
+  font-family: Arial, sans-serif; /* Fuente predeterminada */
+  color: #f7f6f6; /* Color del texto */
+  /*Resolución pantallas*/
+  width: 100%;
+  display: flexbox;
+}
+.logo{
+   justify-content: left;
+    border-radius: 100%;
+    border-bottom: none;
+}
+header{
+  text-align: center;
+  
+}
+.navegacion{
+  width: 100%;
+  margin: 3% auto;
+  justify-content: center;
+}
+.navegacion ul{
+  list-style: none;
+}
+.menu > li{
+  position: relative;
+  display: inline-block;
+}
+.menu >li > a{
+  justify-items: center;
+  display: block;
+  padding: 50px 50px;
+  color:#f0f0f0;
+  font-family: "Open sans";
+  text-decoration: none;
+}
+
+.menu li a:hover{
+  color: #7e7975;
+  transition: all .3s;
+}
+
+/*Submenu*/
+.submenu{
+  position: absolute;
+  width: 70%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.submenu li a{
+  display: block;
+  padding: 10%;
+  color:#fff;
+  font-family: "Open sans";
+  text-decoration: none;
+}
+
+.menu li:hover .submenu{
+visibility: visible;
+opacity: 1;
+}
+
+  /* Estilo para el botón del menú en dispositivos móviles */
+  .icon {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    ul {
+      display: none;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #3498db;
+      z-index: 2;
+    }
+
+    ul.show {
+      display: block;
+    }
+
+    li {
+      float: none;
+      width: 100%;
+    }
+
+    .icon {
+      display: block;
+    }
+  }
+  h1{
+    justify-content: center;
+    color: #f0f0f0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  h3{
+    justify-content: center;
+    color: #f0f0f0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  /*Fotos inicio*/
+.container{
+  display: flex;
+  justify-content: center;
+}
+.fotos{
+  margin: 100px;
+  border-radius: 10%;
+  text-align: end;
+}
+/*Texto Fotos Inicio*/
+.texto_fotos{
+  margin: 100px;
+  justify-content: center;
+  display: flex;
+}
+/*Botones Index*/
+.botones{
+  display: flex;
+  margin:30px;
+  justify-content: center;
+}
+/*Formulario de Contacto*/
+.form-container {
+  width: 400px;
+  background: linear-gradient(to bottom right, #5b99c2, rgb(81, 211, 211)) padding-box,
+              linear-gradient(145deg, transparent 35%,#201cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #0a0a0a;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #272424;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #161414;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #1c6bff;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #242121;
+  font-weight: 600;
+  width: 40%;
+  background:linear-gradient(to bottom right, #97c5e4, rgb(90, 157, 201));
+  border: 1px solid #2b2828;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+/*Fondo Próximas ventas */
+.capa1{
+  background-color: #7296ad9a; 
+}
+/*Botones videjuegos*/
+.botones1{
+  display: flex;
+  margin:30px;
+  justify-content: center;
+}
+.botonesVj{
+  display: flex;
+  margin:30px;
+  justify-content: center;
+}
+/*Diseño botones videojuegos*/
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+strong {
+  z-index: 2;
+  font-family: 'Avalors Personal Use';
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #FFFFFF;
+  text-shadow: 0 0 4px white;
+}
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+.circle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+.circle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+.btn:hover {
+  transform: scale(1.1)
+}
+.btn:active {
+  border: double 4px #FE53BB;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+.btn:active .circle {
+  background: #FE53BB;
+}
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-135rem);
+  }
+}
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+/* Videos Videojuegos*/
+.videoVj{
+  display: flex;
+  margin: 30%;
+  justify-content: center;
+}
+.videos{
+  display: flex;
+  margin:5%;
+  justify-content: center;
+}
+/*Texto videos Videojuegos*/
+.texto{
+  display: flex;
+  justify-content: center;
+  margin:10px 20px;
+  line-height: 18px;
+}
+/*Traductor */
+.traductor{
+  display: flex;
+  margin-left: 80%;
+}
+
+/*Tarjeta Videojuegos*/
+.card {
+  width: 300px;
+  height: 26  0px;
+  padding: .10em;
+  background: #f5f5f5;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ }
+ 
+ .card-img {
+  
+  height: 50%;
+  width: 100%;
+  border-radius: .6rem;
+  transition: .3s ease;
+ }
+ 
+ .card-info {
+  padding-top: 10%;
+ }
+ 
+ svg {
+  width: 20px;
+  height: 20px;
+ }
+ 
+ .card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+ }
+ 
+ /*Text*/
+ .text-title {
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1.5;
+ }
+ 
+ .text-body {
+  font-size: .9em;
+  padding-bottom: 10px;
+ }
+ 
+ /*Button*/
+ .card-button {
+  border: 1px solid #252525;
+  display: flex;
+  padding: .3em;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: .3s ease-in-out;
+ }
+ 
+ /*Hover*/
+ .card-img:hover {
+  transform: translateY(-25%);
+  box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+ }
+ 
+ .card-button:hover {
+  border: 1px solid #ffcaa6;
+  background-color: #ffcaa6;
+ }
+ /*Caja Tutoriales*/
+ /*Botones videjuegos*/
+.tutoriales1{
+  display: flex;
+  margin:30px;
+  justify-content: center;
+}
+ /*Letras Tutoriales*/
+ .tipo1{
+  color: #e1e3e7;
+ }
+ /* Estilos del footer */
+ footer {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para los enlaces del footer */
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 10px;
+}
+/*Diseño de los Productos*/
+main {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.producto {
+  border: 3px solid #5e4f4f;
+  padding: 10px;
+  margin: 10px;
+  
+}
+/*Cubos Brochas*/
+.brochas1{
+  display: flex;
+  margin:15px;
+  justify-content: center;
+  border-radius: 30%;
+  box-shadow: 1px 1px 6px 0 rgb(102, 177, 221), 4px 4px 16px 0 rgb(94, 191, 236), 0px 0px 24px 2px rgb(52, 108, 182);
+}
+/*Carrito Compra*/
+.item {
+  border: 2px solid #000000;
+  padding: 3px;
+  border-radius: 20px;
+}
+.item-title {
+  text-align: center;
+  font-weight: 600;
+}
+.item-image {
+  height: 360px;
+  width: 95%;
+}
+.item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px 15px;
+}
+.item-details > .item-price {
+  margin: 0;
+}
+/* ? SHOPPING CART */
+.shopping-cart-items {
+  padding: 20px 0px;
+}
+.shopping-cart-header {
+  border-bottom: 1px solid #ada7a7;
+}
+.shopping-cart-image {
+  max-width: 80px;
+  border-radius: 20px;
+}
+.shopping-cart-quantity-input {
+  max-width: 45px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #e9dcdc;
+  padding: 5px;
+}
+.shopping-cart-total {
+  min-height: 96px;
+}
+.modal-header{
+  background-color: grey; 
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+.modal-body{
+  background-color: grey; 
+  font-family: 'Times New Roman', Times, serif;
+}
+.modal-footer{
+  background-color: grey; 
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*Texto Brochas*/
+.textoBrochas1{
+  display: flex;
+  margin:15px;
+  justify-content: center; 
+}
+/*Texto Accesorios*/
+.comple{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+}
+/*Botones Productos*/
+.boton2{
+  display: flex;
+  margin:30px;
+  justify-content: center;
+}
+.productosIndex{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  border-radius: 30%;
+}
+.yepoda{
+  color: #2C3E50 ;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.textoI{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.imagen1{
+  display: flex;
+  border-radius: 20%;
+  justify-content: center;
+  width: 30%;
+}
+.imagen2{
+  justify-content: left;
+  border-radius: 20%;
+  width: 15%;
+}
+.imagen3{
+  justify-content: left;
+  border-radius: 20%;
+  width: 17%;
+}
